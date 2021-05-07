@@ -3,7 +3,7 @@ module.exports = {
     title: `Simple`,
     author: {
       name: `xg4`,
-      summary: `I want to simplify the code.`,
+      summary: `Simple, simple, simpler.`,
     },
     description: `Personal blog by xg4.`,
     siteUrl: `https://xg4.vercel.app/`,

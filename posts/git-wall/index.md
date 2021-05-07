@@ -1,5 +1,5 @@
 ---
-title: Git of the Wall Breaker
+title: 速度与 Git
 date: '2018-10-05T05:42:11.000Z'
 description: 还在为 Git 下载速度慢而烦恼吗？
 ---
@@ -42,19 +42,27 @@ vim ~/.gitconfig
 - 如果不存在自行创建
 
 ```sh
-Host github.com *.github.com
+Host github.com
     User git
     # SSH 默认端口 22， HTTPS 默认端口 443
-    Port 22
-    Hostname %h
+    # Port 22
+    # 主机地址，域名或 IP
+    # Hostname %h
     # SSH 私钥
-    IdentityFile ~\.ssh\id_rsa
+    # IdentityFile ~\.ssh\id_rsa
     # 设置代理, 127.0.0.1:1080 换成你自己代理软件监听的本地地址
     # HTTPS 使用 -H，SOCKS 使用 -S
     ProxyCommand connect -S 127.0.0.1:1080 %h %p
 ```
 
-`connect` 是一个让 SSH 支持 SOCKS/HTTPS 代理的工具，windows/macOS/linux 都可以下载
+[`connect`](https://github.com/gotoh/ssh-connect) 是一个让 SSH 支持 SOCKS/HTTPS 代理的工具，windows/macOS/linux 都可以下载
+
+```sh
+# Ubuntu
+apt install connect-proxy
+# Mac
+brew install connect
+```
 
 ### 国内镜像
 
